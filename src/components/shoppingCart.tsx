@@ -4,7 +4,7 @@ import shopping from '../imgs/shopping.png'
 import cest from '../imgs/cesta.png'
 import clear from '../imgs/close.png'
 import { IAPIlibraries, UserFunctionsContext } from './contexts/context'
-import saraiva from '../pictures/logo-saraiva.png'
+import substituteIMG from '../pictures/substituteIMG.png'
 import {Link, useNavigate} from 'react-router-dom'
 
 
@@ -59,7 +59,7 @@ function ShoppingCart(){
                             <div key={id}  className='cart-items'>
                             <div className='cartitemsContent'>
                                 <div className='bookfrontContainer'>
-                                <Link to={`/bookinfo/${item.id}`}><img className='bookfront' src={img ? img : saraiva} onClick={()=>setBookdesc && setBookdesc([item])}></img></Link>
+                                <Link to={`/bookinfo/${item.id}`}><img className='bookfront' src={img ? img : substituteIMG} onClick={()=>setBookdesc && setBookdesc([item])}></img></Link>
                                 </div>
                               
                                 <div className='booktextContainer'>

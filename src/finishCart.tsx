@@ -7,7 +7,7 @@ import { UserFunctionsContext } from "./components/contexts/context";
 import down from './imgs/down.png'
 import { Link, useNavigate } from "react-router-dom";
 import clear from './imgs/close.png'
-import saraiva from './pictures/logo-saraiva.png'
+import substituteIMG from './pictures/substituteIMG.png'
 
 
 function FinishCart(){
@@ -315,7 +315,7 @@ return(
                                 <td>
 
                                 <div className="product">
-                                <Link to={`/bookinfo/${items.id}`}><img onClick={()=>{setBookdesc && setBookdesc([items])}} width={'80px'} src={img ? img : saraiva}></img></Link><p>{title}</p>
+                                <Link to={`/bookinfo/${items.id}`}><img onClick={()=>{setBookdesc && setBookdesc([items])}} width={'80px'} src={img ? img : substituteIMG}></img></Link><p>{title}</p>
                                 </div>
                                 
                                 </td>

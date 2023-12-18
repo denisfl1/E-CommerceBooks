@@ -3,7 +3,7 @@ import {Link,useNavigate} from 'react-router-dom'
 import { useContext } from "react";
 import { UserFunctionsContext} from "./components/contexts/context";
 import clear from './imgs/close.png'
-import saraiva from './pictures/logo-saraiva.png'
+import substituteIMG from './pictures/substituteIMG.png'
 
 
 function Shopping(){
@@ -49,7 +49,7 @@ return(
                 <td>
 
                 <div className="product">
-                <Link to={`/bookinfo/${items.id}`}><img onClick={()=>{setBookdesc && setBookdesc([items])}} width={'80px'} src={img ? img : saraiva}></img></Link><p>{title}</p>
+                <Link to={`/bookinfo/${items.id}`}><img onClick={()=>{setBookdesc && setBookdesc([items])}} width={'80px'} src={img ? img : substituteIMG}></img></Link><p>{title}</p>
                 </div>
                
                 </td>

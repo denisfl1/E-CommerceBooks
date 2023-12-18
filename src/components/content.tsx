@@ -2,7 +2,7 @@ import React, { useCallback,useContext} from "react";
 import hearthoff from '../imgs/coracaooff.png'
 import hearth from '../imgs/coracao.png'
 import {UserFunctionsContext} from './contexts/context'
-import saraiva from '../pictures/logo-saraiva.png'
+import substituteIMG from '../pictures/substituteIMG.png'
 import reaload from '../imgs/rotate.png'
 import { API } from "../api/api";
 import {Link, useNavigate} from 'react-router-dom'
@@ -107,7 +107,7 @@ return(
                 </div>
                 <Link to={`/bookinfo/${id}`}>
                 <div className="picture-book">             
-                 <img  onClick={()=>{setBookdesc && setBookdesc([values])} } src={imgs ? imgs : saraiva}></img>
+                 <img  onClick={()=>{setBookdesc && setBookdesc([values])} } src={imgs ? imgs : substituteIMG}></img>
                 </div>           
                 <div className="div-title"> 
                 <p >{name}</p>
