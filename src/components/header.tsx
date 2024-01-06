@@ -9,13 +9,13 @@ import LetraE from '../imgs/letra-e.png'
 import { UserFunctionsContext} from './contexts/context'
 import {Link} from 'react-router-dom'
 import ShoppingCart from './shoppingCart'
-import { Navigate,useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Header(){
 
     const navigate = useNavigate()
     
-    const {Search,Search2,Publisher,APIlibraries,APIlibraries2,HeaderTitle,openCart} = useContext(UserFunctionsContext)
+    const {Publisher,APIlibraries2,HeaderTitle} = useContext(UserFunctionsContext)
     const {setSearch,setSearch2,setAdd,setPublisher,setHeaderTitle,setOpenCart} = useContext(UserFunctionsContext)
     const {HandleOpenCart} = useContext(UserFunctionsContext)
 
