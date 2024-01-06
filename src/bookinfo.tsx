@@ -16,6 +16,8 @@ const {Authenticated} = useContext(AuthContext)
 
 const navigate = useNavigate()
 
+const randomISBN = Math.floor(Math.random()* 10000000000)
+
 const handleLike  = useCallback<React.MouseEventHandler<HTMLImageElement>>(async(e)=>{
   const id = (e.target as HTMLDivElement).id
   if(!Authenticated)return alert("Você não está Autenticado!")
@@ -84,10 +86,9 @@ return(
         const publisherdata = item.volumeInfo.publishedDate
         const language = item.volumeInfo.language
         const pagecount = item.volumeInfo.pageCount
-        const isbn = item.volumeInfo.industryIdentifiers.map((item)=>{return item.identifier})
+        const isbn = item.volumeInfo.industryIdentifiers ? item.volumeInfo.industryIdentifiers.map((item)=>{return item.identifier})[1] : randomISBN
         const description = [item.volumeInfo.description]
         const description1 = description.map(texto => texto.replace(/<\/?p>/g, ''))
-
         
         return(
 
@@ -110,7 +111,7 @@ return(
                       <div className="contentbookinfo-title"><h2>Por:R${price},00</h2><img id={id} onClick={handleLike} style={{cursor:'pointer'}} src={GetFavorites?.includes(id)?hearth:hearthoff}></img></div>   
                       <div className="contentbook-publisher">
                         <div>{publisher}</div>
-                        <div> {isbn[1] ? " Ref: " + isbn[1] :""}</div>
+                        <div> {isbn == undefined  ? " Ref: " + randomISBN  : " Ref: " + isbn }</div>
                         
                         </div>
                   
@@ -165,7 +166,7 @@ return(
             <li>{language}</li>
             <li>{pagecount}</li>  
             <li>{title}</li>
-            <li>{isbn[1] ? isbn[1] :""}</li>
+            <li>{isbn}</li>
             <li>{subtitle}</li>
 
         </ul>
