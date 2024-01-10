@@ -87,7 +87,7 @@ return(
         const language = item.volumeInfo.language
         const pagecount = item.volumeInfo.pageCount
         const isbn = item.volumeInfo.industryIdentifiers ? item.volumeInfo.industryIdentifiers.map((item)=>{return item.identifier})[1] : randomISBN
-        const description = [item.volumeInfo.description]
+        const description = item.volumeInfo.description?[item.volumeInfo.description]: [""]
         const description1 = description.map(texto => texto.replace(/<\/?p>/g, ''))
         
         return(
