@@ -26,8 +26,15 @@ interface IPrivate{
 
 
   const Private:React.FC<IPrivate> = ({children})=>{
-    const{Authenticated} = useContext(AuthContext)
+    const{Authenticated,Loading} = useContext(AuthContext)
 
+    if(Loading){
+      return <div className='loading'>
+          
+      <h1>Carregando...</h1>
+
+    </div>
+    }
 
     if(!Authenticated){
     return <Navigate to="/login"/>

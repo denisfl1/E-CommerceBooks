@@ -9,6 +9,7 @@ children:React.ReactNode;
 Authenticated?:boolean,
 user?:any,
 subUser?:boolean,
+Loading?:boolean,
 Logged?:(data:any)=>void,
 Logout?:()=>void,
 UserCB?:boolean
@@ -25,6 +26,7 @@ export const AuthProvider:React.FC<IAuthContext>= ({children})=>{
 
 const navigate = useNavigate()
 const [user,setUser] = useState(null)
+const [Loading,setLoading] = useState(true)
 
 const recoverdUser = localStorage.getItem('userdata')
 const token = localStorage.getItem('token')
@@ -36,7 +38,9 @@ useEffect(()=>{
 
     if(recoverdUser && token){
         setUser(JSON.parse(recoverdUser))
+        setLoading(false)
     }else{
+
        return Logout()
        
     }
@@ -75,7 +79,7 @@ const Logout= useCallback(()=>{
 
 
 return(
-<AuthContext.Provider value={{Authenticated:!!user,user,children,Logged,Logout}}>
+<AuthContext.Provider value={{Authenticated:!!user,user,Loading,children,Logged,Logout}}>
 
 {children}
 
