@@ -3,8 +3,8 @@ import {useContext} from 'react'
 import shopping from '../imgs/shopping.png'
 import cest from '../imgs/cesta.png'
 import clear from '../imgs/close.png'
-import { IAPIlibraries, UserFunctionsContext } from './contexts/context'
-import substituteIMG from '../pictures/substituteIMG.png'
+import { UserFunctionsContext } from './contexts/context'
+import substituteIMG from '../pictures/substituteBook.png'
 import {Link, useNavigate} from 'react-router-dom'
 
 

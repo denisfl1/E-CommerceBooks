@@ -3,7 +3,7 @@ import {Link,useNavigate} from 'react-router-dom'
 import { useContext } from "react";
 import { UserFunctionsContext} from "./components/contexts/context";
 import clear from './imgs/close.png'
-import substituteIMG from './pictures/substituteIMG.png'
+import substituteIMG from './pictures/substituteBook.png'
 
 
 function Shopping(){

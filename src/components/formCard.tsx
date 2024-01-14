@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import masterCard from '../imgs/Mastercard-logo.svg.png'
 import visaCard from '../imgs/visa-removebg-preview.png'
 import chip from '../imgs/chip.png'
-import hipercard from './imgs/hipercard.png';
 import maestro from '../imgs/Maestro.png'
 import { API } from "../api/api";
 

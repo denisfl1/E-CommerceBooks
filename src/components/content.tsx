@@ -2,7 +2,7 @@ import React, { useCallback,useContext} from "react";
 import hearthoff from '../imgs/coracaooff.png'
 import hearth from '../imgs/coracao.png'
 import {UserFunctionsContext} from './contexts/context'
-import substituteIMG from '../pictures/substituteIMG.png'
+import substituteIMG from '../pictures/substituteBook.png'
 import reaload from '../imgs/rotate.png'
 import { API } from "../api/api";
 import {Link, useNavigate} from 'react-router-dom'
@@ -10,7 +10,7 @@ import { AuthContext } from "./contexts/authController";
 
 function Content(){
 
-    const {Add,APIlibraries,Favorite,GetFavorites,Bookdesc,CartBook,APIFav} = useContext(UserFunctionsContext)
+    const {Add,APIlibraries,Favorite,GetFavorites,CartBook} = useContext(UserFunctionsContext)
     const {setAdd,setFavorite,setMyFavorites,setBookdesc,setCartBook,setOpenCart}= useContext(UserFunctionsContext)
     const {HandleCart} = useContext(UserFunctionsContext)
     const {Authenticated} = useContext(AuthContext)

@@ -40,7 +40,7 @@ useEffect(()=>{
         setUser(JSON.parse(recoverdUser))
         setLoading(false)
     }else{
-
+        setLoading(false)
        return Logout()
        
     }

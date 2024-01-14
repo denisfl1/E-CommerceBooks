@@ -3,7 +3,7 @@ import { UserFunctionsContext} from "./components/contexts/context";
 import { API } from "./api/api";
 import hearthoff from './imgs/coracaooff.png'
 import hearth from './imgs/coracao.png'
-import substituteIMG from './pictures/substituteIMG.png'
+import substituteIMG from './pictures/substituteBook.png'
 import {useNavigate} from 'react-router-dom'
 import { AuthContext } from "./components/contexts/authController";
 
