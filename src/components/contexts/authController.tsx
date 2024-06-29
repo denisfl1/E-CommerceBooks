@@ -69,8 +69,12 @@ const Logged = (data:any)=>{
 
 const Logout= useCallback(()=>{
 
-    localStorage.removeItem('token')
-    localStorage.removeItem('userdata')
+    const names = ['token','userdata']
+    
+    names.forEach((items:string)=>{
+        localStorage.removeItem(items)
+    })
+  
     setUser(null)
     API.defaults.headers.Authorization = null
     
