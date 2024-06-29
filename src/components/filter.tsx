@@ -1,4 +1,4 @@
-import React, { useCallback, useState,useEffect } from "react";
+import React, { useCallback} from "react";
 import { useContext } from "react";
 import { UserFunctionsContext } from "./contexts/context";
 import filterpng from '../imgs/filtro.png'

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import profile from './imgs/profile.jpg'
 import masterCard from '../imgs/Mastercard-logo.svg.png'
 import visaCard from '../imgs/visa-removebg-preview.png'
 import chip from '../imgs/chip.png'

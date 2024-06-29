@@ -16,7 +16,7 @@ function Header(){
     const navigate = useNavigate()
     
     const {Publisher,APIlibraries2,HeaderTitle} = useContext(UserFunctionsContext)
-    const {setSearch,setSearch2,setAdd,setPublisher,setHeaderTitle,setOpenCart} = useContext(UserFunctionsContext)
+    const {setSearch,setSearch2,setAdd,setPublisher,setHeaderTitle} = useContext(UserFunctionsContext)
     const {HandleOpenCart} = useContext(UserFunctionsContext)
 
     const [inputChange,setInputChange] = useState<string>('')

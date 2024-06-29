@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import profile from './imgs/profile.jpg'
 import { API } from "./api/api";
 import FormCard from "./components/formCard";

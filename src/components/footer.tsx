@@ -1,4 +1,3 @@
-import React from "react";
 import master from '../imgs/master2.jpg'
 import visa from '../imgs/visaminilogo.png'
 import maestro from '../imgs/Maestro1.png'

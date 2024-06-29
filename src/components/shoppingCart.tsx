@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import {useContext} from 'react'
 import shopping from '../imgs/shopping.png'
 import cest from '../imgs/cesta.png'

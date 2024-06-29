@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import mastercard from '../imgs/master2.jpg'
 import visa from '../imgs/visaminilogo.png'
 import maestro from '../imgs/Maestro1.png'
