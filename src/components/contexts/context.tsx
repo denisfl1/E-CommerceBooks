@@ -6,6 +6,18 @@ import { AuthContext } from "./authController";
 import { useNavigate } from "react-router-dom";
 
 
+export interface ICardBoolean{
+  master:boolean,
+  maestro:boolean,
+  visa:boolean,
+  american:boolean,
+  hipercard:boolean
+  discover:boolean,
+  jcb:boolean
+ 
+}
+
+
 export interface IAPIlibraries{
     lenght?:number|undefined;
     kind: string;
@@ -87,6 +99,7 @@ export interface IAPIlibraries{
    setTitleProfile?:React.Dispatch<React.SetStateAction<number>>
 
   }
+
 
 
 export const UserFunctionsContext = createContext <IcontextAPI>(
