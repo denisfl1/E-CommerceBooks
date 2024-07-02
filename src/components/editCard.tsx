@@ -30,8 +30,9 @@ cardBoolean:object
             american:boolean,
             hipercard:boolean
             discover:boolean,
-            jcb:boolean
-          
+            jcb:boolean,
+            name?:string
+           
     }
 
     const [cardBoolean ,setCardBoolean] = useState<ICardBoolean>(
@@ -75,7 +76,18 @@ cardBoolean:object
             e.target.value = formmated
     
             setNumberCard(e.target.value) 
-    
+
+
+            const allCard:any = {master}
+                
+
+        
+            Object.keys(allCard).forEach((key:any) => {
+       
+                console.log(`Nome da variável: ${key}, Valor: ${allCard[key]}`)
+                let propName: keyof ICardBoolean = key;
+                console.log(cardBoolean[propName])
+              });
     
             if(master.test(formmated)){
                 cardBoolean.master = true
