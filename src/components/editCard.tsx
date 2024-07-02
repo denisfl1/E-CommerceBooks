@@ -5,6 +5,7 @@ import chip from '../imgs/chip.png'
 import hipercard from './imgs/hipercard.png';
 import maestro from '../imgs/Maestro.png'
 import { API } from "../api/api";
+import { ICardBoolean } from "./contexts/context";
 
 function EditCard(props:{setEditCard:React.Dispatch<React.SetStateAction<boolean>>,
 setMyCards:React.Dispatch<React.SetStateAction<object>>,myCards:object[],
@@ -22,18 +23,6 @@ cardBoolean:object
     const [flag,setFlag] = useState<string>(props.flag)
     const [afterNumber,setAferNumber] = useState(props.numberCard)
     
-
-    interface ICardBoolean{
-            master:boolean,
-            maestro:boolean,
-            visa:boolean,
-            american:boolean,
-            hipercard:boolean
-            discover:boolean,
-            jcb:boolean
-           
-    }
-
     const [cardBoolean ,setCardBoolean] = useState<ICardBoolean>()
 
     useEffect(()=>{
@@ -67,7 +56,7 @@ cardBoolean:object
 
             const allCard:any = {master,maestro,american,visa,hipercard,jcb}
                   
-            Object.keys(allCard).forEach((key:any) => {
+            Object.keys(allCard).forEach(key => {
        
                 let name:any = {} 
               
