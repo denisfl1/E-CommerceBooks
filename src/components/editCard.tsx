@@ -30,24 +30,11 @@ cardBoolean:object
             american:boolean,
             hipercard:boolean
             discover:boolean,
-            jcb:boolean,
-            name?:string
+            jcb:boolean
            
     }
 
-    const [cardBoolean ,setCardBoolean] = useState<ICardBoolean>(
-       {
-        master:false,
-        maestro:false,
-        visa:false,
-        american:false,
-        hipercard:false,
-        discover:false,
-        jcb:false
-
-    }
-  
-    )
+    const [cardBoolean ,setCardBoolean] = useState<ICardBoolean>()
 
     useEffect(()=>{
         
@@ -72,65 +59,23 @@ cardBoolean:object
             let cleanValue = value.replace(/\D/g, '')
             let formmated  = cleanValue.replace(/(\d{4})/g,'$1 ').trim()
        
-            
+      
             e.target.value = formmated
     
             setNumberCard(e.target.value) 
 
 
-            const allCard:any = {master}
-                
-
-        
+            const allCard:any = {master,maestro,american,visa,hipercard,jcb}
+                  
             Object.keys(allCard).forEach((key:any) => {
        
-                console.log(`Nome da variável: ${key}, Valor: ${allCard[key]}`)
-                let propName: keyof ICardBoolean = key;
-                console.log(cardBoolean[propName])
-              });
-    
-            if(master.test(formmated)){
-                cardBoolean.master = true
-                setFlag('MasterCard')    
-            }else{
-                cardBoolean.master = false     
-            }
-    
-            if(maestro.test(formmated)){
-                cardBoolean.maestro = true
-                setFlag('Maestro')       
-            }else{
-                cardBoolean.maestro = false 
-            }
-    
-            if(american.test(formmated)){
-                cardBoolean.american = true
-                setFlag('American')       
-            }else{
-                cardBoolean.american = false
-            }
-    
-            if(visa.test(formmated)){
-                cardBoolean.visa = true
-                setFlag('Visa')
-            }else{
-                cardBoolean.visa = false
-          
-            }
-            if(hipercard.test(formmated)){
-                cardBoolean.hipercard = true
-                setFlag('Hipercard')
-            }else{
-                cardBoolean.hipercard = false
-            
-            }
-            
-            if(jcb.test(formmated)){
-                cardBoolean.jcb = true  
-                setFlag('jcb')
-            }else{
-                cardBoolean.jcb = false 
-            }
+                let name:any = {} 
+              
+                if(allCard[key].test(formmated))return (name[key] = true,setCardBoolean(name))
+                else if(e.target.value === '')return setCardBoolean(undefined)   
+               
+              })
+
           
     
         }
@@ -227,13 +172,13 @@ cardBoolean:object
                 
                 <div className="cardSubcontainer">
 
-                        <div className={cardBoolean.visa ? "cardContent Visa" : cardBoolean.master ? "cardContent MasterCard" : cardBoolean.american ? "cardContent American" : cardBoolean.hipercard ? "cardContent Hipercard" : cardBoolean.maestro ? "cardContent Maestro": `cardContent `}>
+                        <div className={cardBoolean?.visa ? "cardContent Visa" : cardBoolean?.master ? "cardContent MasterCard" : cardBoolean?.american ? "cardContent American" : cardBoolean?.hipercard ? "cardContent Hipercard" : cardBoolean?.maestro ? "cardContent Maestro": `cardContent `}>
 
                                 <div className="logoCard">
-                                    {cardBoolean.master &&<img width={'60px'} src={masterCard}></img>}
-                                    {cardBoolean.visa &&<img width={'90px'} height={'35px'} src={visaCard}></img>}
-                                    {cardBoolean.maestro &&<img width={'58px'} height={'44px'} src={maestro}></img>}
-                                    {cardBoolean.hipercard && <h2 style={{fontFamily:"Times New Roman"}}>Hipercard</h2>}
+                                    {cardBoolean?.master &&<img width={'60px'} src={masterCard}></img>}
+                                    {cardBoolean?.visa &&<img width={'90px'} height={'35px'} src={visaCard}></img>}
+                                    {cardBoolean?.maestro &&<img width={'58px'} height={'44px'} src={maestro}></img>}
+                                    {cardBoolean?.hipercard && <h2 style={{fontFamily:"Times New Roman"}}>Hipercard</h2>}
                                    
                                     </div>
 
