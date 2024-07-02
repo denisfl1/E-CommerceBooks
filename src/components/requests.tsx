@@ -22,10 +22,23 @@ function Requests(props:{DATARequests:object[]}){
             const price = item.pricetotal
             const name = item.username
             const card = item.cardReq[0].numberCard.slice(-4)
-            const flag1 = item.cardReq[0].flag
+            let flag1 = ''
             const flag = item.cardReq[0].cardBoolean
             const data:any = Object.values(item).map((obj:any)=>obj).slice(0,-6)
-            
+
+            if(flag.master){
+                flag1 = 'MasterCard'
+            }else if(flag.visa){
+                 flag1 = 'Visa'
+            }else if(flag.maestro){
+                     flag1 = 'Maestro'
+            }else if(flag.american){
+                         flag1 = 'American Express'
+            }else if(flag.hipercard){
+                            flag1 = 'Hipercard'
+   }
+    
+
             return(
                 <>
             <div className="RequestsSubContainer">
