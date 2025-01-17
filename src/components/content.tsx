@@ -7,6 +7,7 @@ import reaload from '../imgs/rotate.png'
 import { API } from "../api/api";
 import {Link, useNavigate} from 'react-router-dom'
 import { AuthContext } from "./contexts/authController";
+import { Button } from "../styled_components/button";
 
 function Content(){
 
@@ -92,7 +93,7 @@ return(
         
            return (
             
-            <div  key={index} className="booksDiv">
+            <div key={index} className="booksDiv">
              
                 
                 <div className="div-like">
@@ -118,7 +119,7 @@ return(
                 </div>
                 </Link>
               
-                <button id={id} onClick={()=>{
+                <Button shopping_button id={id} onClick={()=>{
                     setOpenCart && setOpenCart(true)
                     if(CartBook?.some((item)=>item.id == id)){
                         return
@@ -129,7 +130,7 @@ return(
                   
                    
    
-                }}>Comprar</button>               
+                }}>Comprar</Button>               
                
             </div>
 

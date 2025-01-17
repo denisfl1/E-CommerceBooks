@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../styled_components/button";
 
 
 function MyPassword(props:{ setEditPassword:React.Dispatch<React.SetStateAction<boolean>>}){
@@ -15,7 +16,7 @@ return(
                         <span style={{fontSize:'18px'}}>Senha</span>
                         <span style={{marginTop:'10px'}}>******************</span>
                     </div>
-                    <button style={{cursor:' pointer'}} onClick={()=>props.setEditPassword(true)}>REDEFINIR SENHA</button>
+                    <Button reset style={{cursor:' pointer'}} onClick={()=>props.setEditPassword(true)}>REDEFINIR SENHA</Button>
                 </div>
 
 

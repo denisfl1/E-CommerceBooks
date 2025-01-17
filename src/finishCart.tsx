@@ -8,6 +8,7 @@ import down from './imgs/down.png'
 import { Link, useNavigate } from "react-router-dom";
 import clear from './imgs/close.png'
 import substituteIMG from './pictures/substituteBook.png'
+import { Button2 } from "./styled_components/button";
 
 
 function FinishCart(){
@@ -238,9 +239,19 @@ return(
 
                                     {[...myCards].splice(numCard,1).map((it:any)=>{
                                             const number = it.numberCard
-                                            const FLAG = it.flag
+                                            let FLAG = ''
                                             const card_flag = it.cardBoolean
-                                    
+                                            if(card_flag.master){
+                                                FLAG = 'MasterCard'
+                                            }else if(card_flag.visa){
+                                                 FLAG = 'Visa'
+                                            }else if(card_flag.maestro){
+                                                     FLAG = 'Maestro'
+                                            }else if(card_flag.american){
+                                                         FLAG = 'American Express'
+                                            }else if(card_flag.hipercard){
+                                                            FLAG = 'Hipercard'
+                                            }
                                         return(
                                             <div style={{display:'flex',alignItems:'center'}}><img width={'50px'} height={'35px'} src={ card_flag.master ? mastercard : card_flag.visa ? visa : card_flag.maestro && maestro}></img> <p style={{marginLeft:"5px",fontWeight:'545'}}>{number && FLAG && FLAG + ' (Crédito) ' + ' termina em **** ' + number.slice(-4) }</p></div>
                                         )
@@ -392,11 +403,11 @@ return(
 
                 </div>
 
-                <div onClick={SendFinishCart} className="finishing-Button">
+                <Button2 checkout onClick={SendFinishCart} >
 
                   <p>FINALIZAR COMPRA</p> 
 
-                </div>
+                </Button2 >
             </div>
 
 

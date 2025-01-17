@@ -6,7 +6,7 @@ import hearth from './imgs/coracao.png'
 import substituteIMG from './pictures/substituteBook.png'
 import {useNavigate} from 'react-router-dom'
 import { AuthContext } from "./components/contexts/authController";
-
+import {Button} from "./styled_components/button" 
 
 function Bookinfo(){
 
@@ -117,12 +117,12 @@ return(
                   
                    </div>
                    <div className="book-contentinfoButton">
-                        <button id={id} onClick={(()=>{
+                        <Button book_info_button id={id} onClick={(()=>{
                             setOpenCart && setOpenCart(true)
                             if(CartBook?.some((item)=>item.id === id))return
                             HandleCart && HandleCart(item,"AddCart",id)
                            
-                        })}>Adicionar ao carrinho</button> <button onClick={(()=>{
+                        })}>Adicionar ao carrinho</Button> <Button book_info_button onClick={(()=>{
                           if(Authenticated)navigate('/shopping')
                           if(CartBook?.some((data)=>data.id === id))return
                           
@@ -130,7 +130,7 @@ return(
                             HandleCart && HandleCart(item,"AddCart",id)
                           }
 
-                        })}>Comprar</button>
+                        })}>Comprar</Button>
                    </div>
              
             </div>

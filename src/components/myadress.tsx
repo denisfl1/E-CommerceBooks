@@ -1,5 +1,6 @@
 import React, { useCallback} from "react";
 import { API } from "../api/api";
+import { Button } from "../styled_components/button";
 
 
 const MyAdress=(props:{setDATAadress:React.Dispatch<React.SetStateAction<object[]>>,setAddAdress:React.Dispatch<React.SetStateAction<boolean>>,
@@ -24,7 +25,7 @@ return(
 
     <>
     
-     <div style={{width:"75%",marginBottom:'20px',display:"flex"}}><button onClick={()=>props.setAddAdress(true)} style={{marginLeft:"auto",padding:"8px",borderRadius:"5px",border:'none',backgroundColor:"#fdd900"}}>ADICIONAR ENDEREÇO</button></div>
+     <div style={{width:"75%",marginBottom:'20px',display:"flex"}}><Button my_account_add  onClick={()=>props.setAddAdress(true)}>ADICIONAR ENDEREÇO</Button></div>
     {props.DATAadress.length >0 ?
     
     <div style={{display:'flex'}}  className="MyAdressContent">
@@ -62,8 +63,8 @@ return(
                 </div>
                 
                 <div style={{display:"flex",width:"100%",marginTop:"25px"}}>
-                        <button style={{border:'none', marginLeft: "auto" }} onClick={()=>HandleEdit(items,index)}>EDITAR</button>
-                        <button onClick={(async()=>{
+                        <Button  my_account_button  $adress $primary style={{marginLeft: "auto" }} onClick={()=>HandleEdit(items,index)}>EDITAR</Button >
+                        <Button  my_account_button  $adress onClick={(async()=>{
                             const question = window.confirm("Você deseja excluir?")
                             if(question){
                                 await API.delete(`/deleteAdress/${id}`).then(
@@ -75,7 +76,7 @@ return(
                                 )
                             }
 
-                        })} style={{marginLeft:"5px" ,border:'1px solid black',backgroundColor:"white" ,color:'black'}}>EXCLUIR</button>
+                        })} style={{marginLeft:"5px" ,border:'1px solid black',backgroundColor:"white" ,color:'black'}}>EXCLUIR</Button>
                 </div>
                 
               

@@ -16,6 +16,7 @@ import MyPassword from "./components/mypassword";
 import EditPassword from "./components/editPassword";
 import { AuthContext } from "./components/contexts/authController";
 import Swal from "sweetalert2";
+import { Button } from "./styled_components/button";
 
 function MyAccount(){
 
@@ -198,7 +199,7 @@ function MyAccount(){
                 
                 <div style={{minWidth:'80%'}} className="favorites-header">
                  
-                    {!addCard  && !editCard && !personalData && !addAdress && !editAdress && !editPassword && <button style={{marginLeft:"0"}}  id="backbuttonfav" onClick={()=>window.history.back()}><img ></img>VOLTAR</button> }
+                    {!addCard  && !editCard && !personalData && !addAdress && !editAdress && !editPassword && <Button back_button_account style={{marginLeft:"0"}}  id="backbuttonfav" onClick={()=>window.history.back()}><img ></img>VOLTAR</Button> }
             
                     <h2 style={{marginLeft:"0"}}>{HeaderName}</h2>
                                 

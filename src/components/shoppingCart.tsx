@@ -6,6 +6,7 @@ import clear from '../imgs/close.png'
 import { UserFunctionsContext } from './contexts/context'
 import substituteIMG from '../pictures/substituteBook.png'
 import {Link, useNavigate} from 'react-router-dom'
+import { Button } from '../styled_components/button'
 
 
 function ShoppingCart(){
@@ -100,7 +101,7 @@ function ShoppingCart(){
                     <div className='total-content'>
                        <div className='text-total'><div className='title-price'>Subtotal:</div><div className='price-value'>{ "R$" + CartBook?.reduce(( prev,e)=>prev + e.price *e.quantity,0) + ",00"}</div></div>
                        <div className='text-total'><div className='title-price'>Total:</div><div className='price-value'>{"R$" + CartBook?.reduce(( prev,e)=>prev + e.price *e.quantity,0) + ",00"}</div></div> 
-                       <button onClick={(()=>{setOpenCart && setOpenCart(false);CartBook &&CartBook?.length >0 && navigate('/shopping')})}> Comprar </button>  
+                       <Button finish_cart_button onClick={(()=>{setOpenCart && setOpenCart(false);CartBook &&CartBook?.length >0 && navigate('/shopping')})}> Comprar </Button>  
                     </div>
                 </div>
                       

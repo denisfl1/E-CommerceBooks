@@ -6,6 +6,7 @@ import hipercard from './imgs/hipercard.png';
 import maestro from '../imgs/Maestro.png'
 import { API } from "../api/api";
 import { ICardBoolean } from "./contexts/context";
+import { Button } from "../styled_components/button";
 
 function EditCard(props:{setEditCard:React.Dispatch<React.SetStateAction<boolean>>,
 setMyCards:React.Dispatch<React.SetStateAction<object>>,myCards:object[],
@@ -71,7 +72,7 @@ cardBoolean:object
     
         const HandleCardName = (e:React.ChangeEvent<any>)=>{
             const name = e.target.value
-            const regex = /^[^\d\s]/u;
+            const regex = /^[^\d\s]/;
             
             const UPPERCASE = name.toUpperCase()
             if(!regex.test(name))return  setNameCard("")
@@ -156,7 +157,7 @@ cardBoolean:object
                     
                     </div>
 
-                    <div className="cardContainerEndButtons"><button onClick={saveMyCard} className="cardContainerEndButtonsSave">SALVAR ALTERAÇÕES</button><button className="cardContainerEndButtonsCancel" onClick={()=>props.setEditCard(false)}>CANCELAR</button></div>
+                    <div className="cardContainerEndButtons"><Button save_cancel save  onClick={saveMyCard}>SALVAR ALTERAÇÕES</Button><Button save_cancel  onClick={()=>props.setEditCard(false)}>CANCELAR</Button></div>
                     </form>  
                 
                 <div className="cardSubcontainer">

@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { UserFunctionsContext} from "./components/contexts/context";
 import clear from './imgs/close.png'
 import substituteIMG from './pictures/substituteBook.png'
+import { Button2 } from './styled_components/button';
 
 
 function Shopping(){
@@ -115,11 +116,11 @@ return(
 
                 </div>
 
-                <div onClick={()=>{return navigate('/finishcart')} } className="finishing-Button">
+                <Button2 checkout onClick={()=>{return navigate('/finishcart')} } className="finishing-Button">
 
                   <p >FINALIZAR COMPRA</p> 
 
-                </div>
+                </Button2>
             </div>}
            </div>
 

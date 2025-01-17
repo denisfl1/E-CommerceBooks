@@ -5,6 +5,7 @@ import maestro from '../imgs/Maestro.png'
 import chip from '../imgs/chip.png'
 import {useCallback} from "react";
 import { API } from "../api/api";
+import { Button } from "../styled_components/button";
 
 
 function MyCards(props:{addCard:[],editCard:[],titleProfile:number,myCards:object[],setAddCard:React.Dispatch<React.SetStateAction<boolean>>,
@@ -29,7 +30,7 @@ setEditCard:React.Dispatch<React.SetStateAction<boolean>>,numberCard:number,name
 
         <>
         
-        <div style={{display:'flex', justifyContent:"flex-end", width:"60%",marginBottom:'10px'}}><button id="addCardButton" onClick={()=>props.setAddCard(true)}>ADICIONAR CARTÃO</button></div>
+        <div style={{display:'flex', justifyContent:"flex-end", width:"60%",marginBottom:'10px'}}><Button my_account_add onClick={()=>props.setAddCard(true)}>ADICIONAR CARTÃO</Button></div>
             {!props.addCard && !props.editCard && props.titleProfile == 3 &&props.myCards.length >0 ? props.myCards.map((items:any)=>{
             const num = items.numberCard
             const name = items.nameCard
@@ -68,7 +69,7 @@ setEditCard:React.Dispatch<React.SetStateAction<boolean>>,numberCard:number,name
             
             <div className="editDeleteCard">
                
-                <button onClick={()=>HandleDataCard(num,name,valid,sec,FLAG,cardFlag) }>EDITAR</button> <button id="delCardBtn" onClick={(async()=>{
+                <Button my_account_button $card  onClick={()=>HandleDataCard(num,name,valid,sec,FLAG,cardFlag) }>EDITAR</Button> <Button my_account_button $card $primary onClick={(async()=>{
 
         const question = window.confirm("Você deseja excluir?")
             if(question){
@@ -85,7 +86,7 @@ setEditCard:React.Dispatch<React.SetStateAction<boolean>>,numberCard:number,name
             }
         
 
-                })} >EXCLUIR</button>
+                })} >EXCLUIR</Button>
 
             </div>
 

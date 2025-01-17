@@ -103,6 +103,7 @@ function Requests(props:{DATARequests:object[]}){
             const price = items.price
             const quantity = items.quantity
 
+
             return(
                 <tr key={id}>
                 <td>

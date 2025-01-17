@@ -4,6 +4,7 @@ import hide from '../imgs/invisivel.png'
 import {API} from '../api/api'
 import excluir from '../imgs/excluir.png'
 import verifica from '../imgs/verifica.png'
+import { Button } from "../styled_components/button"
 
 
 function EditPassword(props:{ setEditPassword:React.Dispatch<React.SetStateAction<boolean>>,
@@ -64,7 +65,7 @@ return(
                 </div>
 
                 <div className="saveButtonContainer">
-                    <button disabled={password.length <8} onClick={HandleUpdatePassword}>SALVAR SENHA</button>
+                    <Button save_password disabled={password.length <8} onClick={HandleUpdatePassword}>SALVAR SENHA</Button>
                 </div>
 
         </div>

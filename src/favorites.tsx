@@ -6,6 +6,7 @@ import {UserFunctionsContext} from './components/contexts/context'
 import {IAPIlibraries} from './components/contexts/context'
 import { API } from "./api/api";
 import { Link } from "react-router-dom";
+import { Button } from "./styled_components/button";
 
 
 function Favorites(){
@@ -95,11 +96,11 @@ return(
                 </div>
 
               
-                <button id={id} onClick={()=>{
+                <Button shopping_button  id={id} onClick={()=>{
                     setOpenCart &&setOpenCart(true)
                     if(CartBook?.some((items)=>items.id === id))return
                   HandleCart &&  HandleCart(values,"AddCart",id)
-                }}>Comprar</button>
+                }}>Comprar</Button>
                 
                
 
