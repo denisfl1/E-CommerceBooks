@@ -72,7 +72,8 @@ const AddAdress=(props:{setAddAdress:React.Dispatch<React.SetStateAction<boolean
         </select>
     
         <div className='buttons-register'>
-      <Button save_cancel onClick={()=>props.setAddAdress(false)}  id="btn-register"><img width={'14px'}></img>Voltar</Button>  <button id="btn1-register" onClick={HandleAdress} >Salvar</button> 
+      <Button save_cancel onClick={()=>props.setAddAdress(false)}  id="btn-register"><img width={'14px'}></img>Voltar</Button> 
+      <Button id="btn1-register" onClick={HandleAdress} >Salvar</Button> 
          </div>   
         </form>
     </div>
