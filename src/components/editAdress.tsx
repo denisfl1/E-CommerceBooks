@@ -112,7 +112,8 @@ const EditAress=(props:{EditDataAdress:any,setEditDataAdress:React.Dispatch<Reac
         </select>
     
         <div className='buttons-register'>
-      <Button cancel $primary   onClick={()=>props.setEditAdress(false)}  id="btn-register"><img width={'14px'}></img>Voltar</Button >  <Button cancel id="btn1-register" onClick={HandleAdress} >Salvar</Button> 
+      <Button cancel $primary   onClick={()=>props.setEditAdress(false)}  id="btn-register"><img width={'14px'}></img>Voltar</Button >  
+      <Button cancel onClick={HandleAdress} >Salvar</Button> 
          </div>   
         </form>
     </div>
