@@ -122,7 +122,7 @@ numberCard:number,nameCard:string,validadeNum:number,secCode:number,flag:string
         
         <>
     
-    {<div><button style={{marginLeft:"0"}}  id="backbuttonfav" onClick={()=>props.setAddCard(false)}><img ></img>VOLTAR</button> </div>}          
+    {<div><Button back_button_account style={{marginLeft:"0"}}  id="backbuttonfav" onClick={()=>props.setAddCard(false)}><img ></img>VOLTAR</Button> </div>}          
         <div className={'cardContainer'}>
      
                     <form style={{boxSizing:"border-box"}}>

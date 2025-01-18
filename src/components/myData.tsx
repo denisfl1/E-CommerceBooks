@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import {Button} from '../styled_components/button'
 
 function Mydata(props:{setPersonalData:React.Dispatch<React.SetStateAction<boolean>>,
 profileDATA:[],setprofileDATA:React.Dispatch<React.SetStateAction<[]>>
@@ -97,7 +98,7 @@ profileDATA:[],setprofileDATA:React.Dispatch<React.SetStateAction<[]>>
                     </div>
 
                     <div style={{display:"flex",width:"100%",marginTop:"25px"}}>
-                        <button style={{border:'none', marginLeft: "auto" }} onClick={()=>{props.setPersonalData(true)}}>EDITAR</button>
+                        <Button my_account_button style={{marginLeft: "auto" }} onClick={()=>{props.setPersonalData(true)}}>EDITAR</Button>
                     </div>
 
 

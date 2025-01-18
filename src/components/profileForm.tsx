@@ -1,6 +1,7 @@
 import React, { MouseEventHandler, useCallback, useEffect } from "react"
 import { useState } from "react"
 import { API } from "../api/api"
+import { Button } from "../styled_components/button"
 
 
 
@@ -100,7 +101,7 @@ return(
     
 
     <div className='buttons-register'>
-  <button onClick={()=>props.setPersonalData(false)}  id="btn-register"><img width={'14px'}></img>Voltar</button>  <button id="btn1-register" onClick={HandleSend} >Salvar</button> 
+  <Button cancel $primary  onClick={()=>props.setPersonalData(false)}  id="btn-register"><img width={'14px'}></img>Voltar</Button>  <Button  id="btn-register" cancel  onClick={HandleSend} >Salvar</Button> 
      </div>   
     </form>
 </div>

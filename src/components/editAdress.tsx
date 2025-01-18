@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import {API} from '../api/api'
+import { Button } from "../styled_components/button";
 
 
 const EditAress=(props:{EditDataAdress:any,setEditDataAdress:React.Dispatch<React.SetStateAction<string>>,
@@ -111,7 +112,7 @@ const EditAress=(props:{EditDataAdress:any,setEditDataAdress:React.Dispatch<Reac
         </select>
     
         <div className='buttons-register'>
-      <button onClick={()=>props.setEditAdress(false)}  id="btn-register"><img width={'14px'}></img>Voltar</button>  <button id="btn1-register" onClick={HandleAdress} >Salvar</button> 
+      <Button cancel $primary   onClick={()=>props.setEditAdress(false)}  id="btn-register"><img width={'14px'}></img>Voltar</Button >  <Button cancel id="btn1-register" onClick={HandleAdress} >Salvar</Button> 
          </div>   
         </form>
     </div>

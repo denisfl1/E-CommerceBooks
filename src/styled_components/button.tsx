@@ -16,6 +16,8 @@ interface Button_types{
     save?:boolean;
     save_password?:boolean;
     checkout?:boolean;
+    change_card?:boolean;
+    cancel?:boolean;
 
 }
 
@@ -95,12 +97,16 @@ ${props=>props.my_account_button && css`
 
 ${props=>props.back_button_account && css`
 
- margin-right: 0px;
- background-color:#fdd900;
- color: rgb(0, 0, 0);
- height: 35px;
- border: none;
- width: 180px;
+  width: 120px;
+  height: 30px;
+  margin-left: 200px;
+  margin-bottom: 4px;
+  border: none;
+  align-items: center;
+  display: flex;
+  background-color:#ffffff;
+  font-size: 17px;
+  font-weight: 600;
 
 
  &:hover{
@@ -170,6 +176,25 @@ ${props=>props.save_cancel && css`
 }
 `}
 
+${props=>props.cancel && css `
+
+  background-color:${props.$primary ? '#ffffff' : '#fdd900'};
+  width:${props.$primary ? '110px': '200px'};
+  height:40px;
+  align-items: center;
+  display: flex;
+  justify-content:${!props.$primary &&'center' };
+  margin-top:15px;
+  font-size:14px;
+
+
+  &:hover{
+  background-color: #000000;
+  }
+
+
+`}
+
 
 ${props=>props.save_password  && css`
   margin-top: 20px;
@@ -178,6 +203,16 @@ ${props=>props.save_password  && css`
 &:disabled{
   background-color: #f2f4f5;
 }
+
+`}
+
+${props=>props.change_card && css `
+
+background-color: transparent;
+border: 1px solid rgb(191, 191, 191);
+height: 30px;
+width: 80px;
+
 
 `}
 
@@ -216,14 +251,10 @@ ${props=>props.checkout && css`
   bottom: 0;
   font-weight: 500;
   display: flex;
-  background-color:#fdd900 ;
-  font-family: Raleway;
-  cursor: pointer;
-
-&:hover{
   background-color: #000000;
   color: white;
-}
+  font-family: Raleway;
+  cursor: pointer;
 
 p{
   align-items: center;

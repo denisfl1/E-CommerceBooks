@@ -1,5 +1,6 @@
 import React, { useCallback} from "react";
 import {API} from '../api/api'
+import { Button } from "../styled_components/button";
 
 
 const AddAdress=(props:{setAddAdress:React.Dispatch<React.SetStateAction<boolean>>,setDATAadress:any,country:string,CEP:string,adress:string,numberAdress:number,complement:string,district:string,city:string,state:string,
@@ -71,7 +72,7 @@ const AddAdress=(props:{setAddAdress:React.Dispatch<React.SetStateAction<boolean
         </select>
     
         <div className='buttons-register'>
-      <button onClick={()=>props.setAddAdress(false)}  id="btn-register"><img width={'14px'}></img>Voltar</button>  <button id="btn1-register" onClick={HandleAdress} >Salvar</button> 
+      <Button save_cancel onClick={()=>props.setAddAdress(false)}  id="btn-register"><img width={'14px'}></img>Voltar</Button>  <button id="btn1-register" onClick={HandleAdress} >Salvar</button> 
          </div>   
         </form>
     </div>

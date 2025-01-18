@@ -304,7 +304,7 @@ border-top: 1px solid #e5e9f2;
 }
 
 
- #backbuttonfav,#backbuttonshopping{
+ /* #backbuttonfav,#backbuttonshopping{
   width: 120px;
   height: 30px;
   margin-left: 200px;
@@ -318,7 +318,7 @@ border-top: 1px solid #e5e9f2;
  font-weight: 600;
  cursor: pointer;
  border-radius: 5px;
- }
+ } */
 
  /* #addCardButton{
  margin-right: 0px;
@@ -340,10 +340,10 @@ border-top: 1px solid #e5e9f2;
   margin-left: 0;
  }
 
- #backbuttonfav:hover,#backbuttonshopping{
+ /* #backbuttonfav:hover,#backbuttonshopping{
   color: white;
   background-color: #000000;
- }
+ } */
 
  #backbuttonfav img,#backbuttonshopping img{
   margin-right: 10px;
@@ -554,7 +554,7 @@ font-family: 'Raleway', sans-serif;
     background-color: -internal-light-dark(rgb(232, 240, 254))
   }
 
-  .Login-contaier form button , .cardContainer form input button{
+  /* .Login-contaier form button , .cardContainer form input button{
     width: 100%;
     margin-top: 15px;
     background-color: #fdd900;
@@ -566,7 +566,7 @@ font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-family: Raleway,sans-serif;
     cursor: pointer;
-  }
+  } */
 
   #btn2-login{
     background-color: #dee2e7;
@@ -589,22 +589,23 @@ font-family: 'Raleway', sans-serif;
     margin-top: 10px;
     padding-bottom: 50px;
   }
-#btn-register{
+
+/* #btn-register{
 
   background-color: #ffffff;
   width: 110px;
   align-items: center;
   display: flex;
-}
+} */
 #btn-register img{
  margin-right: 5px;
  margin-left: 15px;
  content: url('./imgs/left-arrow.png');
 }
-
+/* 
 #btn-register:hover {
   background-color: #000000;
-}
+} */
 
 
 #btn-register:hover img{

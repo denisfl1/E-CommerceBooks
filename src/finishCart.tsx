@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import clear from './imgs/close.png'
 import substituteIMG from './pictures/substituteBook.png'
 import { Button2 } from "./styled_components/button";
+import { Button } from "./styled_components/button";
 
 
 function FinishCart(){
@@ -174,7 +175,7 @@ return(
     <div className="FinishCartContainer">
 
         <div style={{width:'90%',margin:'auto'}} className="favorites-header">
-         <button onClick={()=>window.history.back()}  id="backbuttonshopping"><img ></img>VOLTAR </button>
+         <Button back_button_account  style={{backgroundColor:'#000000',color:'#ffffff'}} onClick={()=>window.history.back()}  id="backbuttonshopping"><img ></img>VOLTAR </Button>
       <h2 style={{marginLeft:"0px",marginTop:"10px"}}>Finalizar Compra</h2> 
         </div>
 
@@ -213,7 +214,7 @@ return(
                                 </div>    
                             
                             <div className="editFinishCart">
-                            <button onClick={()=>handleCount(items.length -1,'adress')} className="buttonFinishCart">ALTERAR</button>
+                            <Button change_card onClick={()=>handleCount(items.length -1,'adress')} className="buttonFinishCart">ALTERAR</Button>
                             </div>
                             </>
                             )
@@ -267,7 +268,7 @@ return(
                             </div> 
 
                                 <div className="editFinishCart">
-                                <button onClick={()=>handleCount(0,'number')} className="buttonFinishCart">ALTERAR</button>
+                                <Button change_card onClick={()=>handleCount(0,'number')} className="buttonFinishCart">ALTERAR</Button>
                                 </div>
 
                                                                                      

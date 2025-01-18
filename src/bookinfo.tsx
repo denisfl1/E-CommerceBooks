@@ -69,7 +69,7 @@ return(
       
     <div className="favorites-container">
         <div className="favorites-header">
-      <button onClick={()=>window.history.back()}  id="backbuttonfav"><img ></img>VOLTAR </button>
+      <Button back_button_account onClick={()=>window.history.back()}  id="backbuttonfav"><img ></img>VOLTAR </Button>
         <h2>{Bookdesc && Bookdesc.map((items)=>{return items.volumeInfo.title})}</h2>
         </div>
        

@@ -4,6 +4,7 @@ import { UserFunctionsContext} from "./components/contexts/context";
 import clear from './imgs/close.png'
 import substituteIMG from './pictures/substituteBook.png'
 import { Button2 } from './styled_components/button';
+import { Button} from './styled_components/button';
 
 
 function Shopping(){
@@ -17,7 +18,7 @@ return(
     <div className="shopping-container">
 
         <div style={{width:'90%',margin:'auto'}} className="favorites-header">
-         <button onClick={()=>window.history.back()}  id="backbuttonshopping"><img ></img>VOLTAR </button>
+         <Button back_button_account style={{backgroundColor:'black',color:'white'}} onClick={()=>window.history.back()}  id="backbuttonshopping"><img ></img>VOLTAR </Button>
       <h2 style={{marginLeft:"0px",marginTop:"10px"}}>Minha Cesta</h2>
         </div>
 
