@@ -6,7 +6,7 @@ import clear from '../imgs/close.png'
 import { UserFunctionsContext } from './contexts/context'
 import substituteIMG from '../pictures/substituteBook.png'
 import {Link, useNavigate} from 'react-router-dom'
-import { Button } from '../styled_components/button'
+import {Button} from '../styled_components/button'
 
 
 function ShoppingCart(){
@@ -84,7 +84,10 @@ function ShoppingCart(){
                             
                                 <div className='cartControl'>
 
-                                    <button disabled={qtd ==1} onClick={()=>HandleCountCart &&HandleCountCart(item,'decrease',id)}>-</button> <p>{qtd}</p> <button onClick={()=>HandleCountCart && HandleCountCart(item,'increase',id)}>+</button>
+                                    <Button increase_decrease disabled={qtd ==1} onClick={()=>HandleCountCart &&HandleCountCart(item,'decrease',id)}>-</Button> 
+                                    <p>{qtd}</p> 
+                                    
+                                    <Button increase_decrease onClick={()=>HandleCountCart && HandleCountCart(item,'increase',id)}>+</Button>
                                    
                                 </div>
                                 </div>

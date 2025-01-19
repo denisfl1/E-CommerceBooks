@@ -344,7 +344,7 @@ return(
                                 
                                 <div style={{width:"78px",margin:'auto'}}  className='cartControl'>
 
-                                <button disabled={quantity==1} onClick={()=>HandleCountCart && HandleCountCart(items,'decrease',id)}>-</button> <p>{quantity}</p> <button onClick={()=>HandleCountCart && HandleCountCart(items,'increase',id)}>+</button>
+                                <Button increase_decrease disabled={quantity==1} onClick={()=>HandleCountCart && HandleCountCart(items,'decrease',id)}>-</Button> <p>{quantity}</p> <Button increase_decrease  onClick={()=>HandleCountCart && HandleCountCart(items,'increase',id)}>+</Button>
 
                                 </div>
                             

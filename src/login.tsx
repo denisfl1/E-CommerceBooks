@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { API } from './api/api'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from './components/contexts/authController'
+import { Button } from './styled_components/button'
 
 
 
@@ -62,7 +63,7 @@ function Login(){
 
     return(
         <>
-          {LorR &&<div style={{width:"70%",margin:'auto',marginTop:"40px"}}><button onClick={()=>navigate('/')} style={{marginLeft:"0"}}  id="backbuttonfav" ><img ></img>VOLTAR</button> </div>} 
+          {LorR &&<div style={{width:"70%",margin:'auto',marginTop:"40px"}}><Button back_button_account onClick={()=>navigate('/')} style={{marginLeft:"0"}}  id="backbuttonfav" ><img ></img>VOLTAR</Button> </div>} 
         {LorR ?<div className='Login-contaier'>
             
                 <form>
@@ -71,8 +72,8 @@ function Login(){
 
                 <input onChange={(e)=>{setPassword(e.target.value)}} required type='password' name='password' placeholder='Adicione sua senha'></input>
               
-                <button id="btn1-login" onClick={handleLogin}>Entrar</button>
-                <button id="btn2-login" onClick={handleTogle}>Não tem conta? Cadastre-se</button>
+                <Button login $primary onClick={handleLogin}>Entrar</Button>
+                <Button login onClick={handleTogle}>Não tem conta? Cadastre-se</Button>
                 </form>
         </div>
     :
@@ -96,7 +97,7 @@ function Login(){
     <input onChange={(e)=>setPassword(e.target.value)}  required id='login-input' type='password' name='password' placeholder='Digite sua senha'></input>
     
     <div className='buttons-register'>
-  <button onClick={handleTogle} id="btn-register"><img width={'14px'}></img>Voltar</button>  <button id="btn1-register" onClick={handleRegister}>Cadastrar</button> 
+  <Button cancel $primary onClick={handleTogle} id="btn-register"><img width={'14px'}></img>Voltar</Button>  <Button cancel  id="btn1-register" onClick={handleRegister}>Cadastrar</Button> 
      </div>   
     </form>
 </div>}

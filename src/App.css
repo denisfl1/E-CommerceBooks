@@ -455,7 +455,7 @@ font-size: 18px;
   height: 150px;
 }
 
-.searchmore button{
+/* .searchmore button{
   margin:auto;
   height: 38px;
   width: 150px;
@@ -465,7 +465,7 @@ font-size: 18px;
   cursor: pointer;
   display: flex;
   align-items: center;
-}
+} */
 
 .searchmore img{
 
@@ -568,20 +568,20 @@ font-family: 'Raleway', sans-serif;
     cursor: pointer;
   } */
 
-  #btn2-login{
+  /* #btn2-login{
     background-color: #dee2e7;
     color: #000000;
-  }
-
+  } */
+/* 
   #btn2-login:hover{
     background-color: #f2f4f8;
     color: #949494;
-  }
+  } */
 
-  .Login-contaier form button:hover{
+  /* .Login-contaier form button:hover{
    background-color: black;
    color: white;
-  }
+  } */
   
   .buttons-register{
     display: flex;
@@ -1613,7 +1613,7 @@ margin-bottom: 0;
 
 }
 
-.cartControl button{
+/* .cartControl button{
   background-color:transparent;
   border: none;
   width: 30px;
@@ -1631,7 +1631,7 @@ margin-bottom: 0;
   background-color: #fdd900;
   cursor: auto;
 
-}
+} */
 
 .cartdelete{
  cursor: pointer;

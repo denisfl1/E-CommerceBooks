@@ -18,7 +18,9 @@ interface Button_types{
     checkout?:boolean;
     change_card?:boolean;
     cancel?:boolean;
-
+    show_more?:boolean;
+    login?:boolean;
+    increase_decrease?:boolean;
 }
 
 export const Button = styled.button<Button_types>`
@@ -29,6 +31,23 @@ border:none;
 font-weight: 400;
 cursor: pointer;
 border-radius: 5px;
+
+
+${props=>props.login && css `
+
+    width: 100%;
+    margin-top: 15px;
+    background-color:${!props.$primary && '#dee2e7'};
+    color: #000000;
+    height: 40px;
+    font-size: 14px;
+
+&:hover{
+    background-color:${!props.$primary ? '#f2f4f8' : 'black'} ;
+    color:${!props.$primary ? '#949494':'white'} ;
+  }
+
+`}
 
 ${props=>props.shopping_button && css`
 
@@ -82,6 +101,26 @@ background-color: #6e6e6e;
 color: white;
 
 }
+
+`}
+
+${props=>props.increase_decrease && css `
+
+  background-color:transparent;
+  width: 30px;
+  height: 100%;
+
+&:hover{
+  background-color: #e4bd10;
+
+}
+
+&:disabled:hover{
+  background-color: #fdd900;
+  cursor: auto;
+
+}
+
 
 `}
 
@@ -165,7 +204,7 @@ padding: 8px 15px;
 
 ${props=>props.save_cancel && css`
   background-color:${props.save ? '#fdd900' : '#ffffff'};
-  font-size:18px;
+  font-size:18px; 
   width: ${props.save ? '300px' : '130px'};
   height:40px;
   margin-top: 20px;
@@ -190,13 +229,14 @@ ${props=>props.cancel && css `
 
   &:hover{
   background-color: #000000;
+  color:white;
   }
 
 
 `}
 
 
-${props=>props.save_password  && css`
+${props=>props.save_password && css`
   margin-top: 20px;
   padding: 10px;
 
@@ -238,7 +278,16 @@ p{
 
 `}
 
+${props=>props.show_more && css`
 
+
+  margin:auto;
+  height: 38px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+
+`}
 
 `
 

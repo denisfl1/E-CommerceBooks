@@ -23,8 +23,7 @@ useEffect(()=>{
 },[])
 
     const HandleUpdatePassword = async()=>{
-        console.log(password.length)
-
+   
         if(password && password.length >= 8){
             await API.put('/editpassword',{password}).then(
                 res=>{

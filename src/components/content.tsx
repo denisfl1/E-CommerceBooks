@@ -141,7 +141,7 @@ return(
         }
 
            {APIlibraries &&APIlibraries.length>0 &&<div className="searchmore">
-           <button style={{display:Add == 40 ? "none" :"" }} onClick={showmore}><img src={reaload}></img> Carregar mais</button></div>}
+           <Button show_more style={{display:Add == 40 ? "none" :"" }} onClick={showmore}><img src={reaload}></img> Carregar mais</Button></div>}
 
     </div>
 
