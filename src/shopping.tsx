@@ -117,7 +117,7 @@ return(
 
                 </div>
 
-                <Button2 checkout onClick={()=>{return navigate('/finishcart')} } className="finishing-Button">
+                <Button2 checkout $primary onClick={()=>{return navigate('/finishcart')} } >
 
                   <p >FINALIZAR COMPRA</p> 
 

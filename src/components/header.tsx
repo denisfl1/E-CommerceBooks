@@ -27,7 +27,7 @@ function Header(){
         
         if(setSearch && setSearch2 && setAdd && setPublisher && setHeaderTitle){
         setPublisher("")
-        setAdd(10)
+        setAdd(14)
         setSearch( e.currentTarget.value )
         setInputChange("")
         setHeaderTitle("")
@@ -44,7 +44,7 @@ function Header(){
         if(setSearch && setAdd && setPublisher && setHeaderTitle){
         setPublisher("")
         setSearch( inputChange)
-        setAdd(10)
+        setAdd(14)
         setHeaderTitle("")
         navigate('/')
        
@@ -63,7 +63,7 @@ function Header(){
         setPublisher("")
         if(inputChange){
             setSearch(e.currentTarget.textContent)
-            setAdd(10)
+            setAdd(14)
             setInputChange("")
             setHeaderTitle(" ")
             navigate('/')

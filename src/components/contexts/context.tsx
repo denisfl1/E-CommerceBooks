@@ -112,7 +112,7 @@ export const UserFunctionsProvider:React.FC<IcontextAPI> = ({children})=>{
   const [APIlibraries,setAPIlibraries] = useState<IAPIlibraries[]>([])
   const [APIlibraries2,setAPIlibraries2] = useState<IAPIlibraries[]>([])
   const [APIFav,setAPIFav] = useState<IAPIlibraries[]>([])
-  const [Add,setAdd] = useState<number>(10)
+  const [Add,setAdd] = useState<number>(14)
   const [Search,setSearch] = useState<string>('javascript+TypeScript')
   const [Search2,setSearch2] = useState<string>('')
   const [Publisher,setPublisher] = useState<string>("")

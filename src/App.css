@@ -304,46 +304,12 @@ border-top: 1px solid #e5e9f2;
 }
 
 
- /* #backbuttonfav,#backbuttonshopping{
-  width: 120px;
-  height: 30px;
-  margin-left: 200px;
-  margin-bottom: 4px;
-  border: none;
-  align-items: center;
-  display: flex;
-  background-color: #ffffff;
-  font-family: Raleway;
-  font-size: 17px;
- font-weight: 600;
- cursor: pointer;
- border-radius: 5px;
- } */
-
- /* #addCardButton{
- margin-right: 0px;
- background-color:#fdd900;
- color: rgb(0, 0, 0);
- height: 35px;
- border: none;
- border-radius: 5px;
- width: 180px;
- cursor: pointer;
- }
-
- #addCardButton:hover{
-  background-color:#000000;
-  color:#ffffff;
- } */
 
  #backbuttonshopping{
   margin-left: 0;
  }
 
- /* #backbuttonfav:hover,#backbuttonshopping{
-  color: white;
-  background-color: #000000;
- } */
+
 
  #backbuttonfav img,#backbuttonshopping img{
   margin-right: 10px;
@@ -455,17 +421,7 @@ font-size: 18px;
   height: 150px;
 }
 
-/* .searchmore button{
-  margin:auto;
-  height: 38px;
-  width: 150px;
-  border: none;
-  background-color: #fdd900;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-} */
+
 
 .searchmore img{
 
@@ -554,34 +510,7 @@ font-family: 'Raleway', sans-serif;
     background-color: -internal-light-dark(rgb(232, 240, 254))
   }
 
-  /* .Login-contaier form button , .cardContainer form input button{
-    width: 100%;
-    margin-top: 15px;
-    background-color: #fdd900;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    font-family: Raleway,sans-serif;
-    cursor: pointer;
-  } */
-
-  /* #btn2-login{
-    background-color: #dee2e7;
-    color: #000000;
-  } */
-/* 
-  #btn2-login:hover{
-    background-color: #f2f4f8;
-    color: #949494;
-  } */
-
-  /* .Login-contaier form button:hover{
-   background-color: black;
-   color: white;
-  } */
+ 
   
   .buttons-register{
     display: flex;
@@ -590,22 +519,13 @@ font-family: 'Raleway', sans-serif;
     padding-bottom: 50px;
   }
 
-/* #btn-register{
 
-  background-color: #ffffff;
-  width: 110px;
-  align-items: center;
-  display: flex;
-} */
 #btn-register img{
  margin-right: 5px;
  margin-left: 15px;
  content: url('./imgs/left-arrow.png');
 }
-/* 
-#btn-register:hover {
-  background-color: #000000;
-} */
+
 
 
 #btn-register:hover img{
@@ -708,13 +628,7 @@ cursor: pointer;
   font-size: 18px;
 }
 
-/* .SubContainerAdress button{
-  background-color: black;
-  color:white;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-} */
+
 
 .adresscontainer{
   margin-bottom: 4px;
@@ -832,38 +746,6 @@ cursor: pointer;
   margin-top: 20px;
 }
 
-/* .cardContainerEndButtons button{
-  font-size: 18px;
-  font-family: Raleway;
-
-} */
-
-
-/* .cardContainerEndButtonsSave{
-  background-color: #fdd900;
-  height: 40px;
-  width:300px;
-  border:none;
-  border-radius: 5px;
-  cursor: pointer;
-} */
-
-/* .cardContainerEndButtonsCancel{
-  background-color: #ffffff;
-  border-radius: 5px;
-  border: none;
-  width: 130px;
-} */
-
-/* .cardContainerEndButtonsCancel:hover{
-  background-color: rgb(255, 210, 210);
-  cursor: pointer;
-}
-
-.cardContainerEndButtonsSave:hover{
-  background-color: #000000;
-  color: white;
-} */
 
 
 
@@ -905,26 +787,7 @@ cursor: pointer;
 
 }
 
-/* .editDeleteCard button{
- width: 150px;
- height: 35px;
- background-color:white;
- border:none;
- border-radius: 5px;
- font-weight: 400;
-  margin: auto;
-  border: 1px solid black;
-  color:black;
-  cursor: pointer;
-} */
 
-
-/* #delCardBtn{
-  background-color: black;
-  margin-left: 5px;
-  color: white;
-}
- */
 
 .cardContent{
   background-color:#999999;
@@ -1208,19 +1071,7 @@ margin-top: 20px;
   margin-top: 20px;
 }
 
-/* .saveButtonContainer button{
-  background-color: #fdd900;
-  margin-top: 20px;
-  border:none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: Raleway;
-}
 
-.saveButtonContainer button:disabled{
-  background-color: #f2f4f5;
-} */
 
 .myAccountPicture{
   display: flex;
@@ -1356,23 +1207,7 @@ color:#48494c;
   justify-content: space-between;
   width: 100%;
   }
-/* 
-.book-contentinfoButton button{
-margin-top: 10px;
-background-color: #fdd900;
-padding: 0px 15px 0px 15px;
-height: 40px;
-border: none;
-border-radius: 5px;
-font-family: Raleway, sans-serif;
-} */
 
-
-/* .book-contentinfoButton button:hover{
-background-color: #000000;
-color:#ffffff;
-cursor: pointer;
-} */
 
 .specification-book{
   margin-bottom: 50px;
@@ -1613,25 +1448,7 @@ margin-bottom: 0;
 
 }
 
-/* .cartControl button{
-  background-color:transparent;
-  border: none;
-  width: 30px;
-  height: 100%;
-  cursor:pointer
 
-}
-
-.cartControl button:hover{
-  background-color: #e4bd10;
-
-}
-
-.cartControl button:disabled:hover{
-  background-color: #fdd900;
-  cursor: auto;
-
-} */
 
 .cartdelete{
  cursor: pointer;
@@ -1661,25 +1478,6 @@ margin-bottom: 0;
 
 }
 
-
-
-/* .cart-totalContainer button{
-  width: 150px;
-  height: 40px;
-  background-color: #fdd900;
-  border: none;
-  border-radius: 5px;
-  font-family:Raleway ;
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 10px;
-}
-
-.cart-totalContainer button:hover{
-  background-color: #6e6e6e;
-  color: white;
-  cursor: pointer;
-} */
 
 .text-total{
   display: flex;
@@ -1867,29 +1665,7 @@ width: 70px;
   padding-top: 10px;
 }
 
-/* 
-.finishing-Button{
-  height: 62px;
-  width: 100%;
-  background-color:#fdd900 ;
-  position: absolute;
-  bottom: 0;
-  font-weight: 500;
-  cursor: pointer;
-  font-family: Raleway;
-  display: flex;
-}
 
-.finishing-Button:hover{
-  background-color: #000000;
-  color: white;
-}
-
-.finishing-Button p{
-  align-items: center;
-  margin: auto;
-  
-} */
 
 
 .FinishCartContainer{

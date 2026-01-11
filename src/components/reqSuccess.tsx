@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import check from '../imgs/check1.png'
 import { UserFunctionsContext } from "./contexts/context";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../styled_components/button";
 
 
 function ReqSuccess(){
@@ -62,11 +63,11 @@ return(
                 
 
                 <div style={{marginLeft:'28px'}}>
-                    <button onClick={(()=>{
+                    <Button view_request  onClick={(()=>{
                       
                     setTitleProfile && setTitleProfile(2)
                     navigate('/myaccount')
-                    })} style={{cursor:'pointer',backgroundColor:"black",border:'none',borderRadius:'5px' ,color:'white',padding:"10px"}}>VER PEDIDO</button>
+                    })} >VER PEDIDO</Button>
                 </div>
            
         </div>
@@ -76,7 +77,7 @@ return(
     </div>
 
         <div style={{height:'80px'}}>
-            <button onClick={()=>{return navigate('/')}}  style={{cursor:'pointer',borderRadius:'5px',padding:'10px',backgroundColor:'#fdd900',border:'none',display:'flex',margin:'auto',marginTop:"50px"}}>Continuar Comprando</button>
+            <Button continue_shopping onClick={()=>{return navigate('/')}} >Continuar Comprando</Button>
         </div>
 
     </>             

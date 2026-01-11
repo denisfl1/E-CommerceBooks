@@ -18,7 +18,7 @@ const ClickFilter = useCallback<React.MouseEventHandler<HTMLInputElement>>((e)=>
     }
 
     setPublisher("")
-    setAdd(10)
+    setAdd(14)
     setSearch(e.currentTarget.value)
     setHeaderTitle(e.currentTarget.parentElement?.textContent)
  

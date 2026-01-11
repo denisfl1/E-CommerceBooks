@@ -55,7 +55,8 @@ return(
     
     <div style={{marginBottom:'100px',minHeight:'100vh'}} className="favorites-container">
         <div className="favorites-header">
-      <button  id="backbuttonfav" onClick={()=>window.history.back()}><img ></img>VOLTAR </button>
+
+      <Button  back_button_fav  onClick={()=>window.history.back()} id="backbuttonfav"><img ></img>VOLTAR</Button>
         <h2>Favoritos</h2>
         </div>
        

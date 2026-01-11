@@ -76,7 +76,7 @@ return(
    
     })
     
-    } required id='login-input3' type={'text'} name={'cpf'} placeholder='Digite sua senha'></input>
+    } required id='login-input3' type={'text'} name={'cpf'} placeholder='Digite seu CPF'></input>
 
     <label id='login-label'>Telefone</label>
     <input maxLength={15} value={telephone} onChange={((e)=>{
@@ -86,7 +86,7 @@ return(
 
     })
     
-    } required id='login-input4' type={'text'} name={'number'} placeholder='Digite sua senha'></input>
+    } required id='login-input4' type={'text'} name={'number'} placeholder='Digite seu telefone'></input>
 
     <label id='login-label'>Gênero</label>
    
@@ -97,7 +97,7 @@ return(
     </select>
     
     <label id='login-label'>Data de nascimento</label>
-    <input value={date_of_birth} onChange={(e)=>setDate_of_birth(e.target.value)}  required id='login-input5' type='text' placeholder='Digite sua senha'></input>
+    <input value={date_of_birth} onChange={(e)=>setDate_of_birth(e.target.value)}  required id='login-input5' type='text' placeholder='Digite sua data de nascimento'></input>
     
 
     <div className='buttons-register'>

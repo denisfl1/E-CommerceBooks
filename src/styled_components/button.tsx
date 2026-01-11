@@ -10,6 +10,7 @@ interface Button_types{
     $card?:boolean;
     authentication?:boolean;
     back_button_account?:boolean;
+    back_button_fav?:boolean;
     my_account_add?:boolean;
     reset?:boolean;
     save_cancel?:boolean;
@@ -21,6 +22,8 @@ interface Button_types{
     show_more?:boolean;
     login?:boolean;
     increase_decrease?:boolean;
+    view_request?:boolean;
+    continue_shopping?:boolean;
 }
 
 export const Button = styled.button<Button_types>`
@@ -130,6 +133,7 @@ ${props=>props.my_account_button && css`
   background-color:${props.$primary ? '#000000' : '#ffffff'};
   border:${!props.$primary && '1px solid black'};
   color:${props.$primary ? 'white' : 'black'};
+  margin-left:auto;
 
   
 `}
@@ -156,6 +160,32 @@ ${props=>props.back_button_account && css`
 
 
 `}
+
+
+${props=>props.back_button_fav && css`
+
+  width: 120px;
+  height: 30px;
+  margin-left: 200px;
+  margin-bottom: 4px;
+  border: none;
+  align-items: center;
+  display: flex;
+  background-color: #ffffff;
+  font-family: Raleway;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  color:black;
+
+  &:hover{
+  color:white;
+   background-color: black;
+
+  }
+
+  `}
+
 
 ${props=>props.$adress && css`
     padding: 10px;
@@ -263,11 +293,17 @@ ${props=>props.checkout && css`
   bottom: 0;
   font-weight: 500;
   display: flex;
+  background-color:${!props.$primary && ' #000000;'} ;
+  color: ${props.$primary ?' #000000;':' white'};
+  cursor: pointer;
+  font-size:18px;
+  border-radius:0px;
 
 &:hover{
   background-color: #000000;
   color: white;
 }
+
 
 p{
   align-items: center;
@@ -289,6 +325,28 @@ ${props=>props.show_more && css`
 
 `}
 
+
+${props=>props.view_request && css`
+  
+  background-color:black;
+  color:white;
+  padding:10px;
+
+  
+  `}
+
+
+${props=>props.continue_shopping && css`
+  
+  padding:10px;
+  display:flex;
+  margin:auto;
+  margin-top:50px;
+  font-weight:500
+  
+  
+  `}
+
 `
 
 export const Button2 = styled.div<Button_types>`
@@ -300,10 +358,16 @@ ${props=>props.checkout && css`
   bottom: 0;
   font-weight: 500;
   display: flex;
-  background-color: #000000;
-  color: white;
+  background-color:${props.$primary ? '#fdd900' :' #000000;'} ;
+  color: ${props.$primary ?' #000000;':' white'};
   font-family: Raleway;
   cursor: pointer;
+
+&:hover{
+  background-color: #000000;
+  color: white;
+}
+
 
 p{
   align-items: center;
